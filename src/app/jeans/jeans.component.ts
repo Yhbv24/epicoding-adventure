@@ -29,12 +29,12 @@ export class JeansComponent implements OnInit {
 
   levelThreeWinChoice() {
     this.characterService.updateCharacter(this.characterId, 4, 20, 70);
-    this.router.navigate(['vomit', this.characterId]);
+    this.router.navigate(['getJob', this.characterId]);
   }
 
   levelThreeHug() {
     this.characterService.updateCharacter(this.characterId, 4, 15, 30);
-    this.router.navigate(['vomit', this.characterId]);
+    this.router.navigate(['getJob', this.characterId]);
   }
 
 }
