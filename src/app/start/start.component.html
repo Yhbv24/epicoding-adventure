@@ -41,7 +41,7 @@
       <form>
         <label for="characters">Character List:</label><br>
         <select class="form-control" #characterSelect>
-          <option selected value=""></option>
+          <option selected value="blank"></option>
           <option *ngFor="let character of characters | async" value="{{character.$key}}">{{character.name}}</option>
         </select>
       </form>
