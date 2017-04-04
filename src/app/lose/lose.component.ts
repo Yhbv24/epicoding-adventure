@@ -5,12 +5,12 @@ import { Location } from '@angular/common';
 import { CharacterService } from '../character.service';
 
 @Component({
-  selector: 'app-get-job',
-  templateUrl: './get-job.component.html',
-  styleUrls: ['./get-job.component.css'],
+  selector: 'app-lose',
+  templateUrl: './lose.component.html',
+  styleUrls: ['./lose.component.css'],
   providers: [CharacterService]
 })
-export class GetJobComponent implements OnInit {
+export class LoseComponent implements OnInit {
   characterId: string = null;
 
   constructor(private characterService: CharacterService, private router: Router, private route: ActivatedRoute, private location: Location) { }
@@ -21,14 +21,9 @@ export class GetJobComponent implements OnInit {
     });
   }
 
-  levelFourCake() {
-    this.characterService.updateCharacter(this.characterId, 5, 20, 35);
-    this.router.navigate(['get-fired', this.characterId]);
-  }
-
-  levelFourPTO() {
-    this.characterService.updateCharacter(this.characterId, 5, 30, 80);
-    this.router.navigate(['call-in-sick', this.characterId]);
+  reset() {
+    this.characterService.updateCharacter(this.characterId, 1, 1, 50);
+    this.router.navigate(['']);
   }
 
 }

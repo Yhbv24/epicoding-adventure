@@ -7,6 +7,11 @@ import { AwesomeComponent } from './awesome/awesome.component';
 import { VomitComponent } from './vomit/vomit.component';
 import { JeansComponent } from './jeans/jeans.component';
 import { SuitComponent } from './suit/suit.component';
+import { GetFiredComponent } from './get-fired/get-fired.component';
+import { CallInSickComponent } from './call-in-sick/call-in-sick.component';
+import { WinComponent } from './win/win.component';
+import { LoseComponent } from './lose/lose.component';
+import { GetJobComponent } from './get-job/get-job.component';
 
 const appRoutes: Routes = [
   {
@@ -34,8 +39,28 @@ const appRoutes: Routes = [
     component: JeansComponent
   },
   {
+    path: 'get-job/:id',
+    component: GetJobComponent
+  },
+  {
     path: 'suit/:id',
     component: SuitComponent
+  },
+  {
+    path: 'get-fired/:id',
+    component: GetFiredComponent
+  },
+  {
+    path: 'call-in-sick/:id',
+    component: CallInSickComponent
+  },
+  {
+    path: 'win/:id',
+    component: WinComponent
+  },
+  {
+    path: 'lose/:id',
+    component: LoseComponent
   }
 ];
 

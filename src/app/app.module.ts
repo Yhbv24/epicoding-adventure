@@ -15,6 +15,10 @@ import { VomitComponent } from './vomit/vomit.component';
 import { JeansComponent } from './jeans/jeans.component';
 import { SuitComponent } from './suit/suit.component';
 import { GetJobComponent } from './get-job/get-job.component';
+import { GetFiredComponent } from './get-fired/get-fired.component';
+import { CallInSickComponent } from './call-in-sick/call-in-sick.component';
+import { WinComponent } from './win/win.component';
+import { LoseComponent } from './lose/lose.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +37,11 @@ export const firebaseConfig = {
     VomitComponent,
     JeansComponent,
     SuitComponent,
-    GetJobComponent
+    GetJobComponent,
+    GetFiredComponent,
+    CallInSickComponent,
+    WinComponent,
+    LoseComponent
   ],
   imports: [
     BrowserModule,
