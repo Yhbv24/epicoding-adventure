@@ -5,6 +5,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 @Injectable()
 export class CharacterService {
   characters: FirebaseListObservable<any[]>;
+  character;
 
   constructor(private angularFire: AngularFire) {
     this.characters = angularFire.database.list('characters');
@@ -21,4 +22,5 @@ export class CharacterService {
   getCharacterById(characterKey: any) {
     return this.angularFire.database.object('/characters/' + characterKey);
   }
+
 }

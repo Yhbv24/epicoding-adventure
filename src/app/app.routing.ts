@@ -9,7 +9,7 @@ const appRoutes: Routes = [
     component: StartComponent
   },
   {
-    path: 'level-one',
+    path: 'level-one/:name',
     component: LevelOneComponent
   }
 ];
