@@ -22,9 +22,13 @@ export class StartComponent implements OnInit {
 
   startGame(name: string, color: string, track: string, codeTool: string, charSelect: any) {
     if (charSelect == 'blank') {
-      var newCharacter: Character = new Character(name, color, track, codeTool);
-      var charId = this.characterService.saveCharacter(newCharacter);
-      this.router.navigate(['level-one/', charId]);
+      if (!name || !track || !color || !codeTool) {
+        alert("Please complete all form fields to create a character, or choose a pre-made one!");
+      } else {
+        var newCharacter: Character = new Character(name, color, track, codeTool);
+        var charId = this.characterService.saveCharacter(newCharacter);
+        this.router.navigate(['level-one/', charId]);
+      }
     } else {
       this.characterService.getCharacterById(charSelect).subscribe(dataLastEmittedFromObserver => {
       this.character = new Character(
