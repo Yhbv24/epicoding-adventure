@@ -1,0 +1,22 @@
+{ "characters": [{
+  "name": "Charlotte - Tech Savvy",
+  "track": "Python/Django",
+  "favoriteColor": "blue",
+  "tool": "Dashing Debugger"
+  }, {
+    "name": "Jessica - Design Diva",
+    "track": "CSS/Design",
+    "favoriteColor": "red",
+    "tool": "Smooth Talker"
+  }, {
+    "name": "Chad - Code Bro",
+    "track": "C#/.NET",
+    "favoriteColor": "green",
+    "tool": "Conflict Resolver"
+  }, {
+    "name": "Poindexter - Tech Savvy",
+    "track": "Ruby/Rails",
+    "favoriteColor": "gray",
+    "tool": "Syntax Wizard"
+  }]
+}
