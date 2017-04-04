@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class StartComponent implements OnInit {
   characters: FirebaseListObservable<any[]>;
+  character;
 
   constructor(private characterService: CharacterService, private router: Router) { }
 
@@ -19,11 +20,22 @@ export class StartComponent implements OnInit {
     this.characters = this.characterService.getCharacters();
   }
 
-  startGame(name: string, color: string, track: string, codeTool: string, charSelect: string) {
-    var newCharacter: Character = new Character(name, color, track, codeTool);
-    this.characterService.saveCharacter(newCharacter);
-    this.router.navigate(['level-one']);
-
+  startGame(name: string, color: string, track: string, codeTool: string, charSelect: any) {
+    if (charSelect == '') {
+      var newCharacter: Character = new Character(name, color, track, codeTool);
+      this.characterService.saveCharacter(newCharacter);
+      this.router.navigate(['level-one']);
+    } else {
+      this.characterService.getCharacterById(charSelect).subscribe(dataLastEmittedFromObserver => {
+      this.character = new Character(
+        dataLastEmittedFromObserver.name,
+        dataLastEmittedFromObserver.track,
+        dataLastEmittedFromObserver.tool,
+        dataLastEmittedFromObserver.favoriteColor)
+      });
+      console.log(this.character);
+      this.router.navigate(['level-one']);
+    }
   }
 
 }

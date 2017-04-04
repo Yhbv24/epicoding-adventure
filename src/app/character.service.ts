@@ -17,4 +17,8 @@ export class CharacterService {
   saveCharacter(currentCharacter: Character) {
     this.characters.push(currentCharacter);
   }
+
+  getCharacterById(characterKey: any) {
+    return this.angularFire.database.object('/characters/' + characterKey);
+  }
 }
