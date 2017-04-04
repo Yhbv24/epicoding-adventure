@@ -24,16 +24,12 @@ export class CharacterService {
     return this.angularFire.database.object('/characters/' + charId);
   }
 
-  // getId(character) {
-  //   return this.
-  // }
-
-  updateCharacter(characterId) {
+  updateCharacter(characterId, nextLevel, networkingAb, enthus) {
     var savedCharacter = this.getCharacterById(characterId);
     savedCharacter.update({
-      level: 5,
-      networkingAbility: 25,
-      enthusiasm: - 6
+      level: nextLevel,
+      networkingAbility: networkingAb,
+      enthusiasm: enthus
     });
   }
 

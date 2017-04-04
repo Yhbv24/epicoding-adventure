@@ -25,7 +25,7 @@ export class LevelOneComponent implements OnInit {
   }
 
   levelOneJobChoice() {
-    this.characterService.updateCharacter(this.characterId);
+    this.characterService.updateCharacter(this.characterId, 2, 5, 40);
     this.router.navigate(['desperate', this.characterId]);
   }
 }
