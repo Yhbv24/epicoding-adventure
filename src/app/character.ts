@@ -3,7 +3,7 @@ export class Character {
   level: number = 1;
   techAbility: number = 1;
   networkingAbility: number = 1;
-  enthusiasm: number = 100;
+  enthusiasm: number = 50;
 
   constructor(public name: string, public track: string, public tool: string, public favoriteColor: string) {}
 }
