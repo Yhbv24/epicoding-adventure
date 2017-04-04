@@ -7,7 +7,8 @@ import { CharacterService } from '../character.service';
 @Component({
   selector: 'app-get-fired',
   templateUrl: './get-fired.component.html',
-  styleUrls: ['./get-fired.component.css']
+  styleUrls: ['./get-fired.component.css'],
+  providers: [CharacterService]
 })
 export class GetFiredComponent implements OnInit {
   characterId: string = null;
