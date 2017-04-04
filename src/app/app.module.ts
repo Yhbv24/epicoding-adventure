@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { StartComponent } from './start/start.component';
 import { LevelOneComponent } from './level-one/level-one.component';
 import { DesperateComponent } from './desperate/desperate.component';
+import { AwesomeComponent } from './awesome/awesome.component';
+import { VomitComponent } from './vomit/vomit.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -23,7 +25,9 @@ export const firebaseConfig = {
     AppComponent,
     StartComponent,
     LevelOneComponent,
-    DesperateComponent
+    DesperateComponent,
+    AwesomeComponent,
+    VomitComponent
   ],
   imports: [
     BrowserModule,

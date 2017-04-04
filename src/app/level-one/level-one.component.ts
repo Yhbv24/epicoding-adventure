@@ -28,4 +28,14 @@ export class LevelOneComponent implements OnInit {
     this.characterService.updateCharacter(this.characterId, 2, 5, 40);
     this.router.navigate(['desperate', this.characterId]);
   }
+
+  levelOneAwesomeChoice() {
+    this.characterService.updateCharacter(this.characterId, 2, 10, 55);
+    this.router.navigate(['awesome', this.characterId]);
+  }
+
+  levelOneVomitChoice() {
+    this.characterService.updateCharacter(this.characterId, 2, -10, 30);
+    this.router.navigate(['vomit', this.characterId]);
+  }
 }
