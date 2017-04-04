@@ -5,5 +5,5 @@ export class Character {
   networkingAbility: number = 1;
   enthusiasm: number = 100;
 
-  constructor(public name: string, public track: string, public tool: string)
+  constructor(public name: string, public track: string, public tool: string, public favoriteColor: string)
 }
