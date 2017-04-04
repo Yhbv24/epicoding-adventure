@@ -5,6 +5,8 @@ import { LevelOneComponent } from './level-one/level-one.component';
 import { DesperateComponent } from './desperate/desperate.component';
 import { AwesomeComponent } from './awesome/awesome.component';
 import { VomitComponent } from './vomit/vomit.component';
+import { JeansComponent } from './jeans/jeans.component';
+import { SuitComponent } from './suit/suit.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +28,14 @@ const appRoutes: Routes = [
   {
     path: 'vomit/:id',
     component: VomitComponent
+  },
+  {
+    path: 'jeans/:id',
+    component: JeansComponent
+  },
+  {
+    path: 'suit/:id',
+    component: SuitComponent
   }
 ];
 
