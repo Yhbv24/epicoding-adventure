@@ -9,6 +9,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 import { StartComponent } from './start/start.component';
 import { LevelOneComponent } from './level-one/level-one.component';
+import { DesperateComponent } from './desperate/desperate.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -21,7 +22,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     StartComponent,
-    LevelOneComponent
+    LevelOneComponent,
+    DesperateComponent
   ],
   imports: [
     BrowserModule,
