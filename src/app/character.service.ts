@@ -14,5 +14,7 @@ export class CharacterService {
     return this.characters;
   }
 
-  saveCharacter(currentCharacter) {}
+  saveCharacter(currentCharacter: Character) {
+    this.characters.push(currentCharacter);
+  }
 }

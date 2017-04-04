@@ -19,12 +19,9 @@ export class StartComponent implements OnInit {
   }
 
   startGame(name: string, color: string, track: string, codeTool: string, charSelect: string) {
-    if (charSelect != null) {
+    var newCharacter: Character = new Character(name, color, track, codeTool);
+    this.characterService.saveCharacter(newCharacter);
 
-    } else {
-      var newCharacter: Character = new Character(name, color, track, codeTool);
-      this.characterService.saveCharacter(newCharacter);
-    }
   }
 
 }
