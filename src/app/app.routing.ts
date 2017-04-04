@@ -10,11 +10,11 @@ const appRoutes: Routes = [
     component: StartComponent
   },
   {
-    path: 'level-one/:name',
+    path: 'level-one/:id',
     component: LevelOneComponent
   },
   {
-    path: 'desperate/:name',
+    path: 'desperate/:id',
     component: DesperateComponent
   }
 ];

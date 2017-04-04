@@ -9,22 +9,23 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-level-one',
   templateUrl: './level-one.component.html',
-  styleUrls: ['./level-one.component.css']
+  styleUrls: ['./level-one.component.css'],
+  providers: [CharacterService]
 })
 export class LevelOneComponent implements OnInit {
-  characterName: string = null;
+  characterId: string = null;
 
 
-  constructor(private route: ActivatedRoute, private location: Location, private router: Router) { }
+  constructor(private route: ActivatedRoute, private location: Location, private router: Router, private characterService: CharacterService) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.characterName = (urlParameters['name']);
+      this.characterId = (urlParameters['id']);
     });
   }
 
   levelOneJobChoice() {
-
-    this.router.navigate(['desperate', this.characterName]);
+    this.characterService.updateCharacter(this.characterId);
+    this.router.navigate(['desperate', this.characterId]);
   }
 }

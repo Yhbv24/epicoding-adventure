@@ -19,8 +19,21 @@ export class CharacterService {
     this.characters.push(currentCharacter);
   }
 
-  getCharacterById(characterKey: any) {
-    return this.angularFire.database.object('/characters/' + characterKey);
+  getCharacterById(charId: string) {
+    return this.angularFire.database.object('/characters/' + charId);
+  }
+
+  getId(character) {
+    return this.
+  }
+
+  updateCharacter(characterId) {
+    var savedCharacter = this.getCharacterById(characterId);
+    savedCharacter.update({
+      level: 5,
+      networkingAbility: 25,
+      enthusiasm: - 6
+    });
   }
 
 }

@@ -24,7 +24,9 @@ export class StartComponent implements OnInit {
     if (charSelect == '') {
       var newCharacter: Character = new Character(name, color, track, codeTool);
       this.characterService.saveCharacter(newCharacter);
-      this.router.navigate(['level-one/', name]);
+      var charId = this.characterService.getId(newCharacter);
+
+      this.router.navigate(['level-one/', charId]);
     } else {
       this.characterService.getCharacterById(charSelect).subscribe(dataLastEmittedFromObserver => {
       this.character = new Character(
@@ -34,7 +36,7 @@ export class StartComponent implements OnInit {
         dataLastEmittedFromObserver.favoriteColor)
       });
       console.log(this.character);
-      this.router.navigate(['level-one', this.character.name]);
+      this.router.navigate(['level-one', this.character.id]);
     }
   }
 
